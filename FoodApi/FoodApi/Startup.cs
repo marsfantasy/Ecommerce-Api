@@ -58,6 +58,7 @@ namespace FoodApi
            .SetCompatibilityVersion(CompatibilityVersion.Version_3_0)
            .AddNewtonsoftJson(opt => opt.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore);
 
+
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                .AddJwtBearer(options =>
                {
@@ -76,7 +77,7 @@ namespace FoodApi
 
             services.AddDbContext<FoodDbContext>(option =>
                 //option.UseSqlServer(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=FoodAppDb")
-                option.UseSqlServer(@"Data Source=ifabrdsvr.eastasia.cloudapp.azure.com;Initial Catalog=FoodAppDb;Integrated Security=False;User ID=sa;Password=InfoFabRD(Admin);")
+                option.UseSqlServer(@"Data Source=upldev.eastasia.cloudapp.azure.com;Initial Catalog=FoodAppDb;Integrated Security=False;User ID=sa;Password=WeLeader(0728)@KH;")
             ); ;
         }
 
